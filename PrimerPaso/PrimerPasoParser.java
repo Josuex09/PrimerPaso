@@ -1,4 +1,4 @@
-// Generated from PrimerPaso.g4 by ANTLR 4.2
+// Generated from PrimerPaso.g4 by ANTLR 4.5
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -10,11 +10,13 @@ import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class PrimerPasoParser extends Parser {
+	static { RuntimeMetaData.checkVersion("4.5", RuntimeMetaData.VERSION); }
+
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		T__3=1, T__2=2, T__1=3, T__0=4, OPERATOR_NOT=5, OPERATOR_AND=6, OPERATOR_OR=7, 
+		T__0=1, T__1=2, T__2=3, T__3=4, OPERATOR_NOT=5, OPERATOR_AND=6, OPERATOR_OR=7, 
 		OPERATOR_EQU=8, OPERATOR_DIFF=9, OPERATOR_GRT=10, OPERATOR_LOT=11, OPERATOR_GRE=12, 
 		OPERATOR_LOE=13, OPERATOR_POW=14, OPERATOR_MULT=15, OPERATOR_DIV=16, OPERATOR_NEG=17, 
 		OPERATOR_ADD=18, L_PARENTHESIS=19, R_PARENTHESIS=20, L_BRACE=21, R_BRACE=22, 
@@ -26,18 +28,6 @@ public class PrimerPasoParser extends Parser {
 		FUNC_COMPARECHAR=47, VOID=48, RETURN=49, IF=50, ELSE=51, DO=52, DOWHILE=53, 
 		WHILE=54, FOR=55, OPERATOR_ASSIG=56, ID=57, INLINE_COMMENT=58, WS=59, 
 		CHARACTER=60, STRING=61, INTEGER=62, BOOLEAN=63, ARRAY=64;
-	public static final String[] tokenNames = {
-		"<INVALID>", "'bool'", "'letra'", "'entero'", "'hilera'", "'!'", "'y'", 
-		"'o'", "'=='", "'!='", "'>'", "'<'", "'<='", "'>='", "'^'", "'*'", "'/'", 
-		"'-'", "'+'", "'('", "')'", "'{'", "'}'", "'['", "']'", "';'", "','", 
-		"'.mayuscula'", "'.largo'", "'.cantidad'", "'.aHilera'", "'.aNumero'", 
-		"'imprimir'", "'principal'", "'potencia'", "'esDigito'", "'.ordenarAsc'", 
-		"'.ordenarDes'", "'.caracterEn'", "'.mayor'", "'.menor'", "'.dividir'", 
-		"'.cambiar'", "'.reemplazar'", "'.contiene'", "'.esVacia'", "'compararHileras'", 
-		"'compararLetra'", "'nada'", "'retorna'", "'si'", "'sino'", "'haga'", 
-		"'mientras'", "'por mientras'", "'para cada'", "'='", "ID", "INLINE_COMMENT", 
-		"WS", "CHARACTER", "STRING", "INTEGER", "BOOLEAN", "ARRAY"
-	};
 	public static final int
 		RULE_expression = 0, RULE_element = 1, RULE_literal = 2, RULE_id_decl = 3, 
 		RULE_func_call = 4, RULE_var_call = 5, RULE_inputs = 6, RULE_input = 7, 
@@ -63,11 +53,66 @@ public class PrimerPasoParser extends Parser {
 		"array_sentence"
 	};
 
-	@Override
-	public String getGrammarFileName() { return "PrimerPaso.g4"; }
+	private static final String[] _LITERAL_NAMES = {
+		null, "'entero'", "'letra'", "'bool'", "'hilera'", "'!'", "'y'", "'o'", 
+		"'=='", "'!='", "'>'", "'<'", "'<='", "'>='", "'^'", "'*'", "'/'", "'-'", 
+		"'+'", "'('", "')'", "'{'", "'}'", "'['", "']'", "';'", "','", "'.mayuscula'", 
+		"'.largo'", "'.cantidad'", "'.aHilera'", "'.aNumero'", "'imprimir'", "'principal'", 
+		"'potencia'", "'esDigito'", "'.ordenarAsc'", "'.ordenarDes'", "'.caracterEn'", 
+		"'.mayor'", "'.menor'", "'.dividir'", "'.cambiar'", "'.reemplazar'", "'.contiene'", 
+		"'.esVacia'", "'compararHileras'", "'compararLetra'", "'nada'", "'retorna'", 
+		"'si'", "'sino'", "'haga'", "'mientras'", "'por mientras'", "'para cada'", 
+		"'='"
+	};
+	private static final String[] _SYMBOLIC_NAMES = {
+		null, null, null, null, null, "OPERATOR_NOT", "OPERATOR_AND", "OPERATOR_OR", 
+		"OPERATOR_EQU", "OPERATOR_DIFF", "OPERATOR_GRT", "OPERATOR_LOT", "OPERATOR_GRE", 
+		"OPERATOR_LOE", "OPERATOR_POW", "OPERATOR_MULT", "OPERATOR_DIV", "OPERATOR_NEG", 
+		"OPERATOR_ADD", "L_PARENTHESIS", "R_PARENTHESIS", "L_BRACE", "R_BRACE", 
+		"L_BRACKET", "R_BRACKET", "DELIMITER", "COMMA", "FUNC_UPPERCASE", "FUNC_LEN", 
+		"FUNC_AMOUNT", "FUNC_TOSTRING", "FUNC_TOINT", "FUNC_PRINT", "FUNC_MAIN", 
+		"FUNC_POW", "FUNC_ISDIGIT", "FUNC_SORTASC", "FUNC_SORTDES", "FUNC_CHARAT", 
+		"FUNC_HIGHER", "FUNC_LESS", "FUNC_DIVIDE", "FUNC_CHANGE", "FUNC_REPLACE", 
+		"FUNC_CONTAINS", "FUNC_ISEMPTY", "FUNC_COMPARESTRING", "FUNC_COMPARECHAR", 
+		"VOID", "RETURN", "IF", "ELSE", "DO", "DOWHILE", "WHILE", "FOR", "OPERATOR_ASSIG", 
+		"ID", "INLINE_COMMENT", "WS", "CHARACTER", "STRING", "INTEGER", "BOOLEAN", 
+		"ARRAY"
+	};
+	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
+
+	/**
+	 * @deprecated Use {@link #VOCABULARY} instead.
+	 */
+	@Deprecated
+	public static final String[] tokenNames;
+	static {
+		tokenNames = new String[_SYMBOLIC_NAMES.length];
+		for (int i = 0; i < tokenNames.length; i++) {
+			tokenNames[i] = VOCABULARY.getLiteralName(i);
+			if (tokenNames[i] == null) {
+				tokenNames[i] = VOCABULARY.getSymbolicName(i);
+			}
+
+			if (tokenNames[i] == null) {
+				tokenNames[i] = "<INVALID>";
+			}
+		}
+	}
 
 	@Override
-	public String[] getTokenNames() { return tokenNames; }
+	@Deprecated
+	public String[] getTokenNames() {
+		return tokenNames;
+	}
+
+	@Override
+
+	public Vocabulary getVocabulary() {
+		return VOCABULARY;
+	}
+
+	@Override
+	public String getGrammarFileName() { return "PrimerPaso.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }
@@ -83,38 +128,38 @@ public class PrimerPasoParser extends Parser {
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 	public static class ExpressionContext extends ParserRuleContext {
-		public TerminalNode OPERATOR_LOE() { return getToken(PrimerPasoParser.OPERATOR_LOE, 0); }
-		public TerminalNode OPERATOR_GRE() { return getToken(PrimerPasoParser.OPERATOR_GRE, 0); }
-		public ElementContext element() {
-			return getRuleContext(ElementContext.class,0);
-		}
-		public TerminalNode OPERATOR_DIV() { return getToken(PrimerPasoParser.OPERATOR_DIV, 0); }
-		public TerminalNode OPERATOR_LOT() { return getToken(PrimerPasoParser.OPERATOR_LOT, 0); }
-		public TerminalNode OPERATOR_NOT() { return getToken(PrimerPasoParser.OPERATOR_NOT, 0); }
-		public TerminalNode ID() { return getToken(PrimerPasoParser.ID, 0); }
-		public TerminalNode OPERATOR_EQU() { return getToken(PrimerPasoParser.OPERATOR_EQU, 0); }
 		public TerminalNode OPERATOR_NEG() { return getToken(PrimerPasoParser.OPERATOR_NEG, 0); }
-		public TerminalNode OPERATOR_MULT() { return getToken(PrimerPasoParser.OPERATOR_MULT, 0); }
-		public Array_sentenceContext array_sentence() {
-			return getRuleContext(Array_sentenceContext.class,0);
-		}
-		public TerminalNode OPERATOR_POW() { return getToken(PrimerPasoParser.OPERATOR_POW, 0); }
-		public TerminalNode OPERATOR_ADD() { return getToken(PrimerPasoParser.OPERATOR_ADD, 0); }
 		public List<ExpressionContext> expression() {
 			return getRuleContexts(ExpressionContext.class);
 		}
-		public TerminalNode OPERATOR_GRT() { return getToken(PrimerPasoParser.OPERATOR_GRT, 0); }
-		public TerminalNode OPERATOR_DIFF() { return getToken(PrimerPasoParser.OPERATOR_DIFF, 0); }
 		public ExpressionContext expression(int i) {
 			return getRuleContext(ExpressionContext.class,i);
+		}
+		public TerminalNode OPERATOR_NOT() { return getToken(PrimerPasoParser.OPERATOR_NOT, 0); }
+		public ElementContext element() {
+			return getRuleContext(ElementContext.class,0);
 		}
 		public String_sentenceContext string_sentence() {
 			return getRuleContext(String_sentenceContext.class,0);
 		}
+		public TerminalNode ID() { return getToken(PrimerPasoParser.ID, 0); }
 		public TerminalNode STRING() { return getToken(PrimerPasoParser.STRING, 0); }
-		public TerminalNode OPERATOR_OR() { return getToken(PrimerPasoParser.OPERATOR_OR, 0); }
-		public TerminalNode OPERATOR_AND() { return getToken(PrimerPasoParser.OPERATOR_AND, 0); }
+		public Array_sentenceContext array_sentence() {
+			return getRuleContext(Array_sentenceContext.class,0);
+		}
 		public TerminalNode ARRAY() { return getToken(PrimerPasoParser.ARRAY, 0); }
+		public TerminalNode OPERATOR_POW() { return getToken(PrimerPasoParser.OPERATOR_POW, 0); }
+		public TerminalNode OPERATOR_MULT() { return getToken(PrimerPasoParser.OPERATOR_MULT, 0); }
+		public TerminalNode OPERATOR_DIV() { return getToken(PrimerPasoParser.OPERATOR_DIV, 0); }
+		public TerminalNode OPERATOR_ADD() { return getToken(PrimerPasoParser.OPERATOR_ADD, 0); }
+		public TerminalNode OPERATOR_GRT() { return getToken(PrimerPasoParser.OPERATOR_GRT, 0); }
+		public TerminalNode OPERATOR_LOT() { return getToken(PrimerPasoParser.OPERATOR_LOT, 0); }
+		public TerminalNode OPERATOR_GRE() { return getToken(PrimerPasoParser.OPERATOR_GRE, 0); }
+		public TerminalNode OPERATOR_LOE() { return getToken(PrimerPasoParser.OPERATOR_LOE, 0); }
+		public TerminalNode OPERATOR_EQU() { return getToken(PrimerPasoParser.OPERATOR_EQU, 0); }
+		public TerminalNode OPERATOR_DIFF() { return getToken(PrimerPasoParser.OPERATOR_DIFF, 0); }
+		public TerminalNode OPERATOR_AND() { return getToken(PrimerPasoParser.OPERATOR_AND, 0); }
+		public TerminalNode OPERATOR_OR() { return getToken(PrimerPasoParser.OPERATOR_OR, 0); }
 		public ExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -126,11 +171,6 @@ public class PrimerPasoParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitExpression(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitExpression(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -154,45 +194,50 @@ public class PrimerPasoParser extends Parser {
 			switch ( getInterpreter().adaptivePredict(_input,0,_ctx) ) {
 			case 1:
 				{
-				setState(93); match(OPERATOR_NEG);
-				setState(94); expression(10);
+				setState(93);
+				match(OPERATOR_NEG);
+				setState(94);
+				expression(10);
 				}
 				break;
-
 			case 2:
 				{
-				setState(95); match(OPERATOR_NOT);
-				setState(96); expression(5);
+				setState(95);
+				match(OPERATOR_NOT);
+				setState(96);
+				expression(5);
 				}
 				break;
-
 			case 3:
 				{
-				setState(97); element();
+				setState(97);
+				element();
 				}
 				break;
-
 			case 4:
 				{
 				setState(98);
 				_la = _input.LA(1);
 				if ( !(_la==ID || _la==STRING) ) {
 				_errHandler.recoverInline(this);
+				} else {
+					consume();
 				}
-				consume();
-				setState(99); string_sentence();
+				setState(99);
+				string_sentence();
 				}
 				break;
-
 			case 5:
 				{
 				setState(100);
 				_la = _input.LA(1);
 				if ( !(_la==ID || _la==ARRAY) ) {
 				_errHandler.recoverInline(this);
+				} else {
+					consume();
 				}
-				consume();
-				setState(101); array_sentence();
+				setState(101);
+				array_sentence();
 				}
 				break;
 			}
@@ -200,7 +245,7 @@ public class PrimerPasoParser extends Parser {
 			setState(124);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,2,_ctx);
-			while ( _alt!=2 && _alt!=-1 ) {
+			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					if ( _parseListeners!=null ) triggerExitRuleEvent();
 					_prevctx = _localctx;
@@ -213,11 +258,12 @@ public class PrimerPasoParser extends Parser {
 						pushNewRecursionContext(_localctx, _startState, RULE_expression);
 						setState(104);
 						if (!(precpred(_ctx, 9))) throw new FailedPredicateException(this, "precpred(_ctx, 9)");
-						setState(105); match(OPERATOR_POW);
-						setState(106); expression(9);
+						setState(105);
+						match(OPERATOR_POW);
+						setState(106);
+						expression(9);
 						}
 						break;
-
 					case 2:
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
@@ -228,12 +274,13 @@ public class PrimerPasoParser extends Parser {
 						_la = _input.LA(1);
 						if ( !(_la==OPERATOR_MULT || _la==OPERATOR_DIV) ) {
 						_errHandler.recoverInline(this);
+						} else {
+							consume();
 						}
-						consume();
-						setState(109); expression(9);
+						setState(109);
+						expression(9);
 						}
 						break;
-
 					case 3:
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
@@ -244,12 +291,13 @@ public class PrimerPasoParser extends Parser {
 						_la = _input.LA(1);
 						if ( !(_la==OPERATOR_NEG || _la==OPERATOR_ADD) ) {
 						_errHandler.recoverInline(this);
+						} else {
+							consume();
 						}
-						consume();
-						setState(112); expression(8);
+						setState(112);
+						expression(8);
 						}
 						break;
-
 					case 4:
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
@@ -260,31 +308,35 @@ public class PrimerPasoParser extends Parser {
 						_la = _input.LA(1);
 						if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << OPERATOR_EQU) | (1L << OPERATOR_DIFF) | (1L << OPERATOR_GRT) | (1L << OPERATOR_LOT) | (1L << OPERATOR_GRE) | (1L << OPERATOR_LOE))) != 0)) ) {
 						_errHandler.recoverInline(this);
+						} else {
+							consume();
 						}
-						consume();
-						setState(115); expression(7);
+						setState(115);
+						expression(7);
 						}
 						break;
-
 					case 5:
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
 						pushNewRecursionContext(_localctx, _startState, RULE_expression);
 						setState(116);
 						if (!(precpred(_ctx, 4))) throw new FailedPredicateException(this, "precpred(_ctx, 4)");
-						setState(117); match(OPERATOR_AND);
-						setState(118); expression(5);
+						setState(117);
+						match(OPERATOR_AND);
+						setState(118);
+						expression(5);
 						}
 						break;
-
 					case 6:
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
 						pushNewRecursionContext(_localctx, _startState, RULE_expression);
 						setState(119);
 						if (!(precpred(_ctx, 3))) throw new FailedPredicateException(this, "precpred(_ctx, 3)");
-						setState(120); match(OPERATOR_OR);
-						setState(121); expression(4);
+						setState(120);
+						match(OPERATOR_OR);
+						setState(121);
+						expression(4);
 						}
 						break;
 					}
@@ -308,11 +360,11 @@ public class PrimerPasoParser extends Parser {
 	}
 
 	public static class ElementContext extends ParserRuleContext {
-		public Func_callContext func_call() {
-			return getRuleContext(Func_callContext.class,0);
-		}
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class,0);
+		}
+		public Func_callContext func_call() {
+			return getRuleContext(Func_callContext.class,0);
 		}
 		public LiteralContext literal() {
 			return getRuleContext(LiteralContext.class,0);
@@ -329,11 +381,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitElement(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitElement(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ElementContext element() throws RecognitionException {
@@ -345,23 +392,26 @@ public class PrimerPasoParser extends Parser {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(127); match(L_PARENTHESIS);
-				setState(128); expression(0);
-				setState(129); match(R_PARENTHESIS);
+				setState(127);
+				match(L_PARENTHESIS);
+				setState(128);
+				expression(0);
+				setState(129);
+				match(R_PARENTHESIS);
 				}
 				break;
-
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(131); func_call();
+				setState(131);
+				func_call();
 				}
 				break;
-
 			case 3:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(132); literal();
+				setState(132);
+				literal();
 				}
 				break;
 			}
@@ -378,11 +428,11 @@ public class PrimerPasoParser extends Parser {
 	}
 
 	public static class LiteralContext extends ParserRuleContext {
-		public TerminalNode BOOLEAN() { return getToken(PrimerPasoParser.BOOLEAN, 0); }
-		public TerminalNode CHARACTER() { return getToken(PrimerPasoParser.CHARACTER, 0); }
-		public TerminalNode ID() { return getToken(PrimerPasoParser.ID, 0); }
-		public TerminalNode STRING() { return getToken(PrimerPasoParser.STRING, 0); }
 		public TerminalNode INTEGER() { return getToken(PrimerPasoParser.INTEGER, 0); }
+		public TerminalNode CHARACTER() { return getToken(PrimerPasoParser.CHARACTER, 0); }
+		public TerminalNode BOOLEAN() { return getToken(PrimerPasoParser.BOOLEAN, 0); }
+		public TerminalNode STRING() { return getToken(PrimerPasoParser.STRING, 0); }
+		public TerminalNode ID() { return getToken(PrimerPasoParser.ID, 0); }
 		public LiteralContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -394,11 +444,6 @@ public class PrimerPasoParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitLiteral(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitLiteral(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -413,8 +458,9 @@ public class PrimerPasoParser extends Parser {
 			_la = _input.LA(1);
 			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << ID) | (1L << CHARACTER) | (1L << STRING) | (1L << INTEGER) | (1L << BOOLEAN))) != 0)) ) {
 			_errHandler.recoverInline(this);
+			} else {
+				consume();
 			}
-			consume();
 			}
 		}
 		catch (RecognitionException re) {
@@ -429,10 +475,10 @@ public class PrimerPasoParser extends Parser {
 	}
 
 	public static class Id_declContext extends ParserRuleContext {
-		public TerminalNode ID() { return getToken(PrimerPasoParser.ID, 0); }
 		public Data_typeContext data_type() {
 			return getRuleContext(Data_typeContext.class,0);
 		}
+		public TerminalNode ID() { return getToken(PrimerPasoParser.ID, 0); }
 		public Id_declContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -445,11 +491,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitId_decl(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitId_decl(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final Id_declContext id_decl() throws RecognitionException {
@@ -458,8 +499,10 @@ public class PrimerPasoParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(137); data_type();
-			setState(138); match(ID);
+			setState(137);
+			data_type();
+			setState(138);
+			match(ID);
 			}
 		}
 		catch (RecognitionException re) {
@@ -474,10 +517,10 @@ public class PrimerPasoParser extends Parser {
 	}
 
 	public static class Func_callContext extends ParserRuleContext {
+		public TerminalNode ID() { return getToken(PrimerPasoParser.ID, 0); }
 		public InputsContext inputs() {
 			return getRuleContext(InputsContext.class,0);
 		}
-		public TerminalNode ID() { return getToken(PrimerPasoParser.ID, 0); }
 		public TerminalNode DELIMITER() { return getToken(PrimerPasoParser.DELIMITER, 0); }
 		public Func_callContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -491,11 +534,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitFunc_call(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitFunc_call(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final Func_callContext func_call() throws RecognitionException {
@@ -505,22 +543,27 @@ public class PrimerPasoParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(140); match(ID);
-			setState(141); match(L_PARENTHESIS);
+			setState(140);
+			match(ID);
+			setState(141);
+			match(L_PARENTHESIS);
 			setState(143);
 			_la = _input.LA(1);
 			if (((((_la - 5)) & ~0x3f) == 0 && ((1L << (_la - 5)) & ((1L << (OPERATOR_NOT - 5)) | (1L << (OPERATOR_NEG - 5)) | (1L << (L_PARENTHESIS - 5)) | (1L << (ID - 5)) | (1L << (CHARACTER - 5)) | (1L << (STRING - 5)) | (1L << (INTEGER - 5)) | (1L << (BOOLEAN - 5)) | (1L << (ARRAY - 5)))) != 0)) {
 				{
-				setState(142); inputs();
+				setState(142);
+				inputs();
 				}
 			}
 
-			setState(145); match(R_PARENTHESIS);
+			setState(145);
+			match(R_PARENTHESIS);
 			setState(147);
 			switch ( getInterpreter().adaptivePredict(_input,5,_ctx) ) {
 			case 1:
 				{
-				setState(146); match(DELIMITER);
+				setState(146);
+				match(DELIMITER);
 				}
 				break;
 			}
@@ -538,8 +581,8 @@ public class PrimerPasoParser extends Parser {
 	}
 
 	public static class Var_callContext extends ParserRuleContext {
-		public TerminalNode OPERATOR_ASSIG() { return getToken(PrimerPasoParser.OPERATOR_ASSIG, 0); }
 		public TerminalNode ID() { return getToken(PrimerPasoParser.ID, 0); }
+		public TerminalNode OPERATOR_ASSIG() { return getToken(PrimerPasoParser.OPERATOR_ASSIG, 0); }
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class,0);
 		}
@@ -556,11 +599,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitVar_call(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitVar_call(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final Var_callContext var_call() throws RecognitionException {
@@ -569,10 +607,14 @@ public class PrimerPasoParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(149); match(ID);
-			setState(150); match(OPERATOR_ASSIG);
-			setState(151); expression(0);
-			setState(152); match(DELIMITER);
+			setState(149);
+			match(ID);
+			setState(150);
+			match(OPERATOR_ASSIG);
+			setState(151);
+			expression(0);
+			setState(152);
+			match(DELIMITER);
 			}
 		}
 		catch (RecognitionException re) {
@@ -605,11 +647,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitInputs(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitInputs(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final InputsContext inputs() throws RecognitionException {
@@ -619,15 +656,18 @@ public class PrimerPasoParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(154); input();
+			setState(154);
+			input();
 			setState(159);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==COMMA) {
 				{
 				{
-				setState(155); match(COMMA);
-				setState(156); input();
+				setState(155);
+				match(COMMA);
+				setState(156);
+				input();
 				}
 				}
 				setState(161);
@@ -663,11 +703,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitInput(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitInput(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final InputContext input() throws RecognitionException {
@@ -676,7 +711,8 @@ public class PrimerPasoParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(162); expression(0);
+			setState(162);
+			expression(0);
 			}
 		}
 		catch (RecognitionException re) {
@@ -691,10 +727,10 @@ public class PrimerPasoParser extends Parser {
 	}
 
 	public static class Var_declContext extends ParserRuleContext {
-		public TerminalNode OPERATOR_ASSIG() { return getToken(PrimerPasoParser.OPERATOR_ASSIG, 0); }
 		public Id_declContext id_decl() {
 			return getRuleContext(Id_declContext.class,0);
 		}
+		public TerminalNode OPERATOR_ASSIG() { return getToken(PrimerPasoParser.OPERATOR_ASSIG, 0); }
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class,0);
 		}
@@ -711,11 +747,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitVar_decl(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitVar_decl(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final Var_declContext var_decl() throws RecognitionException {
@@ -724,10 +755,14 @@ public class PrimerPasoParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(164); id_decl();
-			setState(165); match(OPERATOR_ASSIG);
-			setState(166); expression(0);
-			setState(167); match(DELIMITER);
+			setState(164);
+			id_decl();
+			setState(165);
+			match(OPERATOR_ASSIG);
+			setState(166);
+			expression(0);
+			setState(167);
+			match(DELIMITER);
 			}
 		}
 		catch (RecognitionException re) {
@@ -742,20 +777,20 @@ public class PrimerPasoParser extends Parser {
 	}
 
 	public static class Data_typeContext extends ParserRuleContext {
-		public Type_stringContext type_string() {
-			return getRuleContext(Type_stringContext.class,0);
+		public Type_intContext type_int() {
+			return getRuleContext(Type_intContext.class,0);
+		}
+		public Type_charContext type_char() {
+			return getRuleContext(Type_charContext.class,0);
 		}
 		public Type_boolContext type_bool() {
 			return getRuleContext(Type_boolContext.class,0);
 		}
-		public Type_intContext type_int() {
-			return getRuleContext(Type_intContext.class,0);
+		public Type_stringContext type_string() {
+			return getRuleContext(Type_stringContext.class,0);
 		}
 		public Type_voidContext type_void() {
 			return getRuleContext(Type_voidContext.class,0);
-		}
-		public Type_charContext type_char() {
-			return getRuleContext(Type_charContext.class,0);
 		}
 		public Data_typeContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -769,11 +804,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitData_type(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitData_type(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final Data_typeContext data_type() throws RecognitionException {
@@ -784,29 +814,34 @@ public class PrimerPasoParser extends Parser {
 			{
 			setState(174);
 			switch (_input.LA(1)) {
-			case 3:
+			case T__0:
 				{
-				setState(169); type_int();
+				setState(169);
+				type_int();
 				}
 				break;
-			case 2:
+			case T__1:
 				{
-				setState(170); type_char();
+				setState(170);
+				type_char();
 				}
 				break;
-			case 1:
+			case T__2:
 				{
-				setState(171); type_bool();
+				setState(171);
+				type_bool();
 				}
 				break;
-			case 4:
+			case T__3:
 				{
-				setState(172); type_string();
+				setState(172);
+				type_string();
 				}
 				break;
 			case VOID:
 				{
-				setState(173); type_void();
+				setState(173);
+				type_void();
 				}
 				break;
 			default:
@@ -838,11 +873,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitType_int(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitType_int(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final Type_intContext type_int() throws RecognitionException {
@@ -851,7 +881,8 @@ public class PrimerPasoParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(176); match(3);
+			setState(176);
+			match(T__0);
 			}
 		}
 		catch (RecognitionException re) {
@@ -878,11 +909,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitType_char(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitType_char(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final Type_charContext type_char() throws RecognitionException {
@@ -891,7 +917,8 @@ public class PrimerPasoParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(178); match(2);
+			setState(178);
+			match(T__1);
 			}
 		}
 		catch (RecognitionException re) {
@@ -918,11 +945,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitType_bool(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitType_bool(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final Type_boolContext type_bool() throws RecognitionException {
@@ -931,7 +953,8 @@ public class PrimerPasoParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(180); match(1);
+			setState(180);
+			match(T__2);
 			}
 		}
 		catch (RecognitionException re) {
@@ -958,11 +981,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitType_string(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitType_string(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final Type_stringContext type_string() throws RecognitionException {
@@ -971,7 +989,8 @@ public class PrimerPasoParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(182); match(4);
+			setState(182);
+			match(T__3);
 			}
 		}
 		catch (RecognitionException re) {
@@ -998,11 +1017,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitType_void(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitType_void(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final Type_voidContext type_void() throws RecognitionException {
@@ -1011,7 +1025,8 @@ public class PrimerPasoParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(184); match(VOID);
+			setState(184);
+			match(VOID);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1043,11 +1058,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitResult(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitResult(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ResultContext result() throws RecognitionException {
@@ -1056,9 +1066,12 @@ public class PrimerPasoParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(186); match(RETURN);
-			setState(187); expression(0);
-			setState(188); match(DELIMITER);
+			setState(186);
+			match(RETURN);
+			setState(187);
+			expression(0);
+			setState(188);
+			match(DELIMITER);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1074,16 +1087,16 @@ public class PrimerPasoParser extends Parser {
 
 	public static class If_conditionalContext extends ParserRuleContext {
 		public TerminalNode IF() { return getToken(PrimerPasoParser.IF, 0); }
-		public TerminalNode ELSE() { return getToken(PrimerPasoParser.ELSE, 0); }
-		public BlockContext block(int i) {
-			return getRuleContext(BlockContext.class,i);
-		}
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class,0);
 		}
 		public List<BlockContext> block() {
 			return getRuleContexts(BlockContext.class);
 		}
+		public BlockContext block(int i) {
+			return getRuleContext(BlockContext.class,i);
+		}
+		public TerminalNode ELSE() { return getToken(PrimerPasoParser.ELSE, 0); }
 		public If_conditionalContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -1096,11 +1109,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitIf_conditional(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitIf_conditional(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final If_conditionalContext if_conditional() throws RecognitionException {
@@ -1110,17 +1118,24 @@ public class PrimerPasoParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(190); match(IF);
-			setState(191); match(L_PARENTHESIS);
-			setState(192); expression(0);
-			setState(193); match(R_PARENTHESIS);
-			setState(194); block();
+			setState(190);
+			match(IF);
+			setState(191);
+			match(L_PARENTHESIS);
+			setState(192);
+			expression(0);
+			setState(193);
+			match(R_PARENTHESIS);
+			setState(194);
+			block();
 			setState(197);
 			_la = _input.LA(1);
 			if (_la==ELSE) {
 				{
-				setState(195); match(ELSE);
-				setState(196); block();
+				setState(195);
+				match(ELSE);
+				setState(196);
+				block();
 				}
 			}
 
@@ -1141,10 +1156,10 @@ public class PrimerPasoParser extends Parser {
 		public List<ParamContext> param() {
 			return getRuleContexts(ParamContext.class);
 		}
-		public List<TerminalNode> COMMA() { return getTokens(PrimerPasoParser.COMMA); }
 		public ParamContext param(int i) {
 			return getRuleContext(ParamContext.class,i);
 		}
+		public List<TerminalNode> COMMA() { return getTokens(PrimerPasoParser.COMMA); }
 		public TerminalNode COMMA(int i) {
 			return getToken(PrimerPasoParser.COMMA, i);
 		}
@@ -1160,11 +1175,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitParams(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitParams(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ParamsContext params() throws RecognitionException {
@@ -1174,15 +1184,18 @@ public class PrimerPasoParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(199); param();
+			setState(199);
+			param();
 			setState(204);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==COMMA) {
 				{
 				{
-				setState(200); match(COMMA);
-				setState(201); param();
+				setState(200);
+				match(COMMA);
+				setState(201);
+				param();
 				}
 				}
 				setState(206);
@@ -1218,11 +1231,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitParam(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitParam(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ParamContext param() throws RecognitionException {
@@ -1231,7 +1239,8 @@ public class PrimerPasoParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(207); id_decl();
+			setState(207);
+			id_decl();
 			}
 		}
 		catch (RecognitionException re) {
@@ -1246,14 +1255,14 @@ public class PrimerPasoParser extends Parser {
 	}
 
 	public static class BlockContext extends ParserRuleContext {
+		public TerminalNode L_BRACE() { return getToken(PrimerPasoParser.L_BRACE, 0); }
+		public TerminalNode R_BRACE() { return getToken(PrimerPasoParser.R_BRACE, 0); }
 		public List<SentenceContext> sentence() {
 			return getRuleContexts(SentenceContext.class);
 		}
 		public SentenceContext sentence(int i) {
 			return getRuleContext(SentenceContext.class,i);
 		}
-		public TerminalNode L_BRACE() { return getToken(PrimerPasoParser.L_BRACE, 0); }
-		public TerminalNode R_BRACE() { return getToken(PrimerPasoParser.R_BRACE, 0); }
 		public BlockContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -1266,11 +1275,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitBlock(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitBlock(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final BlockContext block() throws RecognitionException {
@@ -1280,21 +1284,24 @@ public class PrimerPasoParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(209); match(L_BRACE);
+			setState(209);
+			match(L_BRACE);
 			setState(213);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << 1) | (1L << 2) | (1L << 3) | (1L << 4) | (1L << FUNC_PRINT) | (1L << FUNC_POW) | (1L << FUNC_ISDIGIT) | (1L << FUNC_REPLACE) | (1L << FUNC_COMPARESTRING) | (1L << VOID) | (1L << RETURN) | (1L << IF) | (1L << DO) | (1L << WHILE) | (1L << FOR) | (1L << ID))) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << T__2) | (1L << T__3) | (1L << FUNC_PRINT) | (1L << FUNC_POW) | (1L << FUNC_ISDIGIT) | (1L << FUNC_REPLACE) | (1L << FUNC_COMPARESTRING) | (1L << VOID) | (1L << RETURN) | (1L << IF) | (1L << DO) | (1L << WHILE) | (1L << FOR) | (1L << ID))) != 0)) {
 				{
 				{
-				setState(210); sentence();
+				setState(210);
+				sentence();
 				}
 				}
 				setState(215);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(216); match(R_BRACE);
+			setState(216);
+			match(R_BRACE);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1309,14 +1316,14 @@ public class PrimerPasoParser extends Parser {
 	}
 
 	public static class Dowhile_defContext extends ParserRuleContext {
+		public Do_defContext do_def() {
+			return getRuleContext(Do_defContext.class,0);
+		}
 		public TerminalNode DOWHILE() { return getToken(PrimerPasoParser.DOWHILE, 0); }
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class,0);
 		}
 		public TerminalNode DELIMITER() { return getToken(PrimerPasoParser.DELIMITER, 0); }
-		public Do_defContext do_def() {
-			return getRuleContext(Do_defContext.class,0);
-		}
 		public Dowhile_defContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -1329,11 +1336,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitDowhile_def(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitDowhile_def(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final Dowhile_defContext dowhile_def() throws RecognitionException {
@@ -1342,12 +1344,18 @@ public class PrimerPasoParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(218); do_def();
-			setState(219); match(DOWHILE);
-			setState(220); match(L_PARENTHESIS);
-			setState(221); expression(0);
-			setState(222); match(R_PARENTHESIS);
-			setState(223); match(DELIMITER);
+			setState(218);
+			do_def();
+			setState(219);
+			match(DOWHILE);
+			setState(220);
+			match(L_PARENTHESIS);
+			setState(221);
+			expression(0);
+			setState(222);
+			match(R_PARENTHESIS);
+			setState(223);
+			match(DELIMITER);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1381,11 +1389,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitWhile_def(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitWhile_def(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final While_defContext while_def() throws RecognitionException {
@@ -1394,11 +1397,16 @@ public class PrimerPasoParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(225); match(WHILE);
-			setState(226); match(L_PARENTHESIS);
-			setState(227); expression(0);
-			setState(228); match(R_PARENTHESIS);
-			setState(229); block();
+			setState(225);
+			match(WHILE);
+			setState(226);
+			match(L_PARENTHESIS);
+			setState(227);
+			expression(0);
+			setState(228);
+			match(R_PARENTHESIS);
+			setState(229);
+			block();
 			}
 		}
 		catch (RecognitionException re) {
@@ -1429,11 +1437,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitDo_def(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitDo_def(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final Do_defContext do_def() throws RecognitionException {
@@ -1442,8 +1445,10 @@ public class PrimerPasoParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(231); match(DO);
-			setState(232); block();
+			setState(231);
+			match(DO);
+			setState(232);
+			block();
 			}
 		}
 		catch (RecognitionException re) {
@@ -1458,12 +1463,12 @@ public class PrimerPasoParser extends Parser {
 	}
 
 	public static class For_defContext extends ParserRuleContext {
-		public ExpressionContext expression(int i) {
-			return getRuleContext(ExpressionContext.class,i);
-		}
 		public TerminalNode FOR() { return getToken(PrimerPasoParser.FOR, 0); }
 		public List<ExpressionContext> expression() {
 			return getRuleContexts(ExpressionContext.class);
+		}
+		public ExpressionContext expression(int i) {
+			return getRuleContext(ExpressionContext.class,i);
 		}
 		public BlockContext block() {
 			return getRuleContext(BlockContext.class,0);
@@ -1480,11 +1485,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitFor_def(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitFor_def(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final For_defContext for_def() throws RecognitionException {
@@ -1493,15 +1493,24 @@ public class PrimerPasoParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(234); match(FOR);
-			setState(235); match(L_PARENTHESIS);
-			setState(236); expression(0);
-			setState(237); match(DELIMITER);
-			setState(238); expression(0);
-			setState(239); match(DELIMITER);
-			setState(240); expression(0);
-			setState(241); match(R_PARENTHESIS);
-			setState(242); block();
+			setState(234);
+			match(FOR);
+			setState(235);
+			match(L_PARENTHESIS);
+			setState(236);
+			expression(0);
+			setState(237);
+			match(DELIMITER);
+			setState(238);
+			expression(0);
+			setState(239);
+			match(DELIMITER);
+			setState(240);
+			expression(0);
+			setState(241);
+			match(R_PARENTHESIS);
+			setState(242);
+			block();
 			}
 		}
 		catch (RecognitionException re) {
@@ -1519,11 +1528,11 @@ public class PrimerPasoParser extends Parser {
 		public Id_declContext id_decl() {
 			return getRuleContext(Id_declContext.class,0);
 		}
-		public ParamsContext params() {
-			return getRuleContext(ParamsContext.class,0);
-		}
 		public BlockContext block() {
 			return getRuleContext(BlockContext.class,0);
+		}
+		public ParamsContext params() {
+			return getRuleContext(ParamsContext.class,0);
 		}
 		public Function_defContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -1537,11 +1546,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitFunction_def(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitFunction_def(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final Function_defContext function_def() throws RecognitionException {
@@ -1551,18 +1555,23 @@ public class PrimerPasoParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(244); id_decl();
-			setState(245); match(L_PARENTHESIS);
+			setState(244);
+			id_decl();
+			setState(245);
+			match(L_PARENTHESIS);
 			setState(247);
 			_la = _input.LA(1);
-			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << 1) | (1L << 2) | (1L << 3) | (1L << 4) | (1L << VOID))) != 0)) {
+			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << T__2) | (1L << T__3) | (1L << VOID))) != 0)) {
 				{
-				setState(246); params();
+				setState(246);
+				params();
 				}
 			}
 
-			setState(249); match(R_PARENTHESIS);
-			setState(250); block();
+			setState(249);
+			match(R_PARENTHESIS);
+			setState(250);
+			block();
 			}
 		}
 		catch (RecognitionException re) {
@@ -1577,10 +1586,10 @@ public class PrimerPasoParser extends Parser {
 	}
 
 	public static class IsDigit_defContext extends ParserRuleContext {
+		public TerminalNode FUNC_ISDIGIT() { return getToken(PrimerPasoParser.FUNC_ISDIGIT, 0); }
 		public Id_declContext id_decl() {
 			return getRuleContext(Id_declContext.class,0);
 		}
-		public TerminalNode FUNC_ISDIGIT() { return getToken(PrimerPasoParser.FUNC_ISDIGIT, 0); }
 		public TerminalNode DELIMITER() { return getToken(PrimerPasoParser.DELIMITER, 0); }
 		public IsDigit_defContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -1594,11 +1603,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitIsDigit_def(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitIsDigit_def(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final IsDigit_defContext isDigit_def() throws RecognitionException {
@@ -1607,11 +1611,16 @@ public class PrimerPasoParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(252); match(FUNC_ISDIGIT);
-			setState(253); match(L_PARENTHESIS);
-			setState(254); id_decl();
-			setState(255); match(R_PARENTHESIS);
-			setState(256); match(DELIMITER);
+			setState(252);
+			match(FUNC_ISDIGIT);
+			setState(253);
+			match(L_PARENTHESIS);
+			setState(254);
+			id_decl();
+			setState(255);
+			match(R_PARENTHESIS);
+			setState(256);
+			match(DELIMITER);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1640,11 +1649,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitSortAsc_def(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitSortAsc_def(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final SortAsc_defContext sortAsc_def() throws RecognitionException {
@@ -1653,10 +1657,14 @@ public class PrimerPasoParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(258); match(FUNC_SORTASC);
-			setState(259); match(L_PARENTHESIS);
-			setState(260); match(R_PARENTHESIS);
-			setState(261); match(DELIMITER);
+			setState(258);
+			match(FUNC_SORTASC);
+			setState(259);
+			match(L_PARENTHESIS);
+			setState(260);
+			match(R_PARENTHESIS);
+			setState(261);
+			match(DELIMITER);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1685,11 +1693,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitSortDes_def(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitSortDes_def(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final SortDes_defContext sortDes_def() throws RecognitionException {
@@ -1698,10 +1701,14 @@ public class PrimerPasoParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(263); match(FUNC_SORTDES);
-			setState(264); match(L_PARENTHESIS);
-			setState(265); match(R_PARENTHESIS);
-			setState(266); match(DELIMITER);
+			setState(263);
+			match(FUNC_SORTDES);
+			setState(264);
+			match(L_PARENTHESIS);
+			setState(265);
+			match(R_PARENTHESIS);
+			setState(266);
+			match(DELIMITER);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1730,11 +1737,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitHigher_def(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitHigher_def(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final Higher_defContext higher_def() throws RecognitionException {
@@ -1743,10 +1745,14 @@ public class PrimerPasoParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(268); match(FUNC_HIGHER);
-			setState(269); match(L_PARENTHESIS);
-			setState(270); match(R_PARENTHESIS);
-			setState(271); match(DELIMITER);
+			setState(268);
+			match(FUNC_HIGHER);
+			setState(269);
+			match(L_PARENTHESIS);
+			setState(270);
+			match(R_PARENTHESIS);
+			setState(271);
+			match(DELIMITER);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1775,11 +1781,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitLess_def(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitLess_def(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final Less_defContext less_def() throws RecognitionException {
@@ -1788,10 +1789,14 @@ public class PrimerPasoParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(273); match(FUNC_LESS);
-			setState(274); match(L_PARENTHESIS);
-			setState(275); match(R_PARENTHESIS);
-			setState(276); match(DELIMITER);
+			setState(273);
+			match(FUNC_LESS);
+			setState(274);
+			match(L_PARENTHESIS);
+			setState(275);
+			match(R_PARENTHESIS);
+			setState(276);
+			match(DELIMITER);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1806,12 +1811,12 @@ public class PrimerPasoParser extends Parser {
 	}
 
 	public static class Divide_defContext extends ParserRuleContext {
-		public ExpressionContext expression(int i) {
-			return getRuleContext(ExpressionContext.class,i);
-		}
 		public TerminalNode FUNC_DIVIDE() { return getToken(PrimerPasoParser.FUNC_DIVIDE, 0); }
 		public List<ExpressionContext> expression() {
 			return getRuleContexts(ExpressionContext.class);
+		}
+		public ExpressionContext expression(int i) {
+			return getRuleContext(ExpressionContext.class,i);
 		}
 		public TerminalNode DELIMITER() { return getToken(PrimerPasoParser.DELIMITER, 0); }
 		public Divide_defContext(ParserRuleContext parent, int invokingState) {
@@ -1826,11 +1831,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitDivide_def(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitDivide_def(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final Divide_defContext divide_def() throws RecognitionException {
@@ -1839,13 +1839,20 @@ public class PrimerPasoParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(278); match(FUNC_DIVIDE);
-			setState(279); match(L_PARENTHESIS);
-			setState(280); expression(0);
-			setState(281); match(COMMA);
-			setState(282); expression(0);
-			setState(283); match(R_PARENTHESIS);
-			setState(284); match(DELIMITER);
+			setState(278);
+			match(FUNC_DIVIDE);
+			setState(279);
+			match(L_PARENTHESIS);
+			setState(280);
+			expression(0);
+			setState(281);
+			match(COMMA);
+			setState(282);
+			expression(0);
+			setState(283);
+			match(R_PARENTHESIS);
+			setState(284);
+			match(DELIMITER);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1860,12 +1867,12 @@ public class PrimerPasoParser extends Parser {
 	}
 
 	public static class Change_defContext extends ParserRuleContext {
-		public ExpressionContext expression(int i) {
-			return getRuleContext(ExpressionContext.class,i);
-		}
 		public TerminalNode FUNC_CHANGE() { return getToken(PrimerPasoParser.FUNC_CHANGE, 0); }
 		public List<ExpressionContext> expression() {
 			return getRuleContexts(ExpressionContext.class);
+		}
+		public ExpressionContext expression(int i) {
+			return getRuleContext(ExpressionContext.class,i);
 		}
 		public TerminalNode DELIMITER() { return getToken(PrimerPasoParser.DELIMITER, 0); }
 		public Change_defContext(ParserRuleContext parent, int invokingState) {
@@ -1880,11 +1887,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitChange_def(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitChange_def(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final Change_defContext change_def() throws RecognitionException {
@@ -1893,13 +1895,20 @@ public class PrimerPasoParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(286); match(FUNC_CHANGE);
-			setState(287); match(L_PARENTHESIS);
-			setState(288); expression(0);
-			setState(289); match(COMMA);
-			setState(290); expression(0);
-			setState(291); match(R_PARENTHESIS);
-			setState(292); match(DELIMITER);
+			setState(286);
+			match(FUNC_CHANGE);
+			setState(287);
+			match(L_PARENTHESIS);
+			setState(288);
+			expression(0);
+			setState(289);
+			match(COMMA);
+			setState(290);
+			expression(0);
+			setState(291);
+			match(R_PARENTHESIS);
+			setState(292);
+			match(DELIMITER);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1914,12 +1923,12 @@ public class PrimerPasoParser extends Parser {
 	}
 
 	public static class Replace_defContext extends ParserRuleContext {
-		public ExpressionContext expression(int i) {
-			return getRuleContext(ExpressionContext.class,i);
-		}
 		public TerminalNode FUNC_REPLACE() { return getToken(PrimerPasoParser.FUNC_REPLACE, 0); }
 		public List<ExpressionContext> expression() {
 			return getRuleContexts(ExpressionContext.class);
+		}
+		public ExpressionContext expression(int i) {
+			return getRuleContext(ExpressionContext.class,i);
 		}
 		public TerminalNode DELIMITER() { return getToken(PrimerPasoParser.DELIMITER, 0); }
 		public Replace_defContext(ParserRuleContext parent, int invokingState) {
@@ -1934,11 +1943,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitReplace_def(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitReplace_def(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final Replace_defContext replace_def() throws RecognitionException {
@@ -1947,13 +1951,20 @@ public class PrimerPasoParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(294); match(FUNC_REPLACE);
-			setState(295); match(L_PARENTHESIS);
-			setState(296); expression(0);
-			setState(297); match(COMMA);
-			setState(298); expression(0);
-			setState(299); match(R_PARENTHESIS);
-			setState(300); match(DELIMITER);
+			setState(294);
+			match(FUNC_REPLACE);
+			setState(295);
+			match(L_PARENTHESIS);
+			setState(296);
+			expression(0);
+			setState(297);
+			match(COMMA);
+			setState(298);
+			expression(0);
+			setState(299);
+			match(R_PARENTHESIS);
+			setState(300);
+			match(DELIMITER);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1985,11 +1996,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitContains_def(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitContains_def(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final Contains_defContext contains_def() throws RecognitionException {
@@ -1998,11 +2004,16 @@ public class PrimerPasoParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(302); match(FUNC_CONTAINS);
-			setState(303); match(L_PARENTHESIS);
-			setState(304); expression(0);
-			setState(305); match(R_PARENTHESIS);
-			setState(306); match(DELIMITER);
+			setState(302);
+			match(FUNC_CONTAINS);
+			setState(303);
+			match(L_PARENTHESIS);
+			setState(304);
+			expression(0);
+			setState(305);
+			match(R_PARENTHESIS);
+			setState(306);
+			match(DELIMITER);
 			}
 		}
 		catch (RecognitionException re) {
@@ -2034,11 +2045,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitIsEmpty_def(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitIsEmpty_def(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final IsEmpty_defContext isEmpty_def() throws RecognitionException {
@@ -2047,11 +2053,16 @@ public class PrimerPasoParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(308); match(FUNC_ISEMPTY);
-			setState(309); match(L_PARENTHESIS);
-			setState(310); expression(0);
-			setState(311); match(R_PARENTHESIS);
-			setState(312); match(DELIMITER);
+			setState(308);
+			match(FUNC_ISEMPTY);
+			setState(309);
+			match(L_PARENTHESIS);
+			setState(310);
+			expression(0);
+			setState(311);
+			match(R_PARENTHESIS);
+			setState(312);
+			match(DELIMITER);
 			}
 		}
 		catch (RecognitionException re) {
@@ -2066,12 +2077,12 @@ public class PrimerPasoParser extends Parser {
 	}
 
 	public static class CompareString_defContext extends ParserRuleContext {
-		public ExpressionContext expression(int i) {
-			return getRuleContext(ExpressionContext.class,i);
-		}
 		public TerminalNode FUNC_COMPARESTRING() { return getToken(PrimerPasoParser.FUNC_COMPARESTRING, 0); }
 		public List<ExpressionContext> expression() {
 			return getRuleContexts(ExpressionContext.class);
+		}
+		public ExpressionContext expression(int i) {
+			return getRuleContext(ExpressionContext.class,i);
 		}
 		public TerminalNode DELIMITER() { return getToken(PrimerPasoParser.DELIMITER, 0); }
 		public CompareString_defContext(ParserRuleContext parent, int invokingState) {
@@ -2086,11 +2097,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitCompareString_def(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitCompareString_def(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final CompareString_defContext compareString_def() throws RecognitionException {
@@ -2099,13 +2105,20 @@ public class PrimerPasoParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(314); match(FUNC_COMPARESTRING);
-			setState(315); match(L_PARENTHESIS);
-			setState(316); expression(0);
-			setState(317); match(COMMA);
-			setState(318); expression(0);
-			setState(319); match(R_PARENTHESIS);
-			setState(320); match(DELIMITER);
+			setState(314);
+			match(FUNC_COMPARESTRING);
+			setState(315);
+			match(L_PARENTHESIS);
+			setState(316);
+			expression(0);
+			setState(317);
+			match(COMMA);
+			setState(318);
+			expression(0);
+			setState(319);
+			match(R_PARENTHESIS);
+			setState(320);
+			match(DELIMITER);
 			}
 		}
 		catch (RecognitionException re) {
@@ -2120,15 +2133,15 @@ public class PrimerPasoParser extends Parser {
 	}
 
 	public static class Amount_defContext extends ParserRuleContext {
-		public TerminalNode ID() { return getToken(PrimerPasoParser.ID, 0); }
+		public TerminalNode FUNC_AMOUNT() { return getToken(PrimerPasoParser.FUNC_AMOUNT, 0); }
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class,0);
 		}
-		public TerminalNode DELIMITER() { return getToken(PrimerPasoParser.DELIMITER, 0); }
 		public Type_charContext type_char() {
 			return getRuleContext(Type_charContext.class,0);
 		}
-		public TerminalNode FUNC_AMOUNT() { return getToken(PrimerPasoParser.FUNC_AMOUNT, 0); }
+		public TerminalNode ID() { return getToken(PrimerPasoParser.ID, 0); }
+		public TerminalNode DELIMITER() { return getToken(PrimerPasoParser.DELIMITER, 0); }
 		public Amount_defContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -2141,11 +2154,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitAmount_def(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitAmount_def(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final Amount_defContext amount_def() throws RecognitionException {
@@ -2154,14 +2162,22 @@ public class PrimerPasoParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(322); match(FUNC_AMOUNT);
-			setState(323); match(L_PARENTHESIS);
-			setState(324); expression(0);
-			setState(325); match(COMMA);
-			setState(326); type_char();
-			setState(327); match(ID);
-			setState(328); match(R_PARENTHESIS);
-			setState(329); match(DELIMITER);
+			setState(322);
+			match(FUNC_AMOUNT);
+			setState(323);
+			match(L_PARENTHESIS);
+			setState(324);
+			expression(0);
+			setState(325);
+			match(COMMA);
+			setState(326);
+			type_char();
+			setState(327);
+			match(ID);
+			setState(328);
+			match(R_PARENTHESIS);
+			setState(329);
+			match(DELIMITER);
 			}
 		}
 		catch (RecognitionException re) {
@@ -2176,13 +2192,13 @@ public class PrimerPasoParser extends Parser {
 	}
 
 	public static class Main_defContext extends ParserRuleContext {
-		public BlockContext block() {
-			return getRuleContext(BlockContext.class,0);
-		}
 		public Data_typeContext data_type() {
 			return getRuleContext(Data_typeContext.class,0);
 		}
 		public TerminalNode FUNC_MAIN() { return getToken(PrimerPasoParser.FUNC_MAIN, 0); }
+		public BlockContext block() {
+			return getRuleContext(BlockContext.class,0);
+		}
 		public Main_defContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -2195,11 +2211,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitMain_def(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitMain_def(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final Main_defContext main_def() throws RecognitionException {
@@ -2208,11 +2219,16 @@ public class PrimerPasoParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(331); data_type();
-			setState(332); match(FUNC_MAIN);
-			setState(333); match(L_PARENTHESIS);
-			setState(334); match(R_PARENTHESIS);
-			setState(335); block();
+			setState(331);
+			data_type();
+			setState(332);
+			match(FUNC_MAIN);
+			setState(333);
+			match(L_PARENTHESIS);
+			setState(334);
+			match(R_PARENTHESIS);
+			setState(335);
+			block();
 			}
 		}
 		catch (RecognitionException re) {
@@ -2244,11 +2260,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitLength_def(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitLength_def(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final Length_defContext length_def() throws RecognitionException {
@@ -2257,11 +2268,16 @@ public class PrimerPasoParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(337); match(FUNC_LEN);
-			setState(338); match(L_PARENTHESIS);
-			setState(339); expression(0);
-			setState(340); match(R_PARENTHESIS);
-			setState(341); match(DELIMITER);
+			setState(337);
+			match(FUNC_LEN);
+			setState(338);
+			match(L_PARENTHESIS);
+			setState(339);
+			expression(0);
+			setState(340);
+			match(R_PARENTHESIS);
+			setState(341);
+			match(DELIMITER);
 			}
 		}
 		catch (RecognitionException re) {
@@ -2276,12 +2292,12 @@ public class PrimerPasoParser extends Parser {
 	}
 
 	public static class Power_defContext extends ParserRuleContext {
-		public ExpressionContext expression(int i) {
-			return getRuleContext(ExpressionContext.class,i);
-		}
 		public TerminalNode FUNC_POW() { return getToken(PrimerPasoParser.FUNC_POW, 0); }
 		public List<ExpressionContext> expression() {
 			return getRuleContexts(ExpressionContext.class);
+		}
+		public ExpressionContext expression(int i) {
+			return getRuleContext(ExpressionContext.class,i);
 		}
 		public TerminalNode DELIMITER() { return getToken(PrimerPasoParser.DELIMITER, 0); }
 		public Power_defContext(ParserRuleContext parent, int invokingState) {
@@ -2296,11 +2312,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitPower_def(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitPower_def(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final Power_defContext power_def() throws RecognitionException {
@@ -2309,13 +2320,20 @@ public class PrimerPasoParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(343); match(FUNC_POW);
-			setState(344); match(L_PARENTHESIS);
-			setState(345); expression(0);
-			setState(346); match(COMMA);
-			setState(347); expression(0);
-			setState(348); match(R_PARENTHESIS);
-			setState(349); match(DELIMITER);
+			setState(343);
+			match(FUNC_POW);
+			setState(344);
+			match(L_PARENTHESIS);
+			setState(345);
+			expression(0);
+			setState(346);
+			match(COMMA);
+			setState(347);
+			expression(0);
+			setState(348);
+			match(R_PARENTHESIS);
+			setState(349);
+			match(DELIMITER);
 			}
 		}
 		catch (RecognitionException re) {
@@ -2330,10 +2348,10 @@ public class PrimerPasoParser extends Parser {
 	}
 
 	public static class Print_defContext extends ParserRuleContext {
+		public TerminalNode FUNC_PRINT() { return getToken(PrimerPasoParser.FUNC_PRINT, 0); }
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class,0);
 		}
-		public TerminalNode FUNC_PRINT() { return getToken(PrimerPasoParser.FUNC_PRINT, 0); }
 		public TerminalNode DELIMITER() { return getToken(PrimerPasoParser.DELIMITER, 0); }
 		public Print_defContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -2347,11 +2365,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitPrint_def(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitPrint_def(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final Print_defContext print_def() throws RecognitionException {
@@ -2360,11 +2373,16 @@ public class PrimerPasoParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(351); match(FUNC_PRINT);
-			setState(352); match(L_PARENTHESIS);
-			setState(353); expression(0);
-			setState(354); match(R_PARENTHESIS);
-			setState(355); match(DELIMITER);
+			setState(351);
+			match(FUNC_PRINT);
+			setState(352);
+			match(L_PARENTHESIS);
+			setState(353);
+			expression(0);
+			setState(354);
+			match(R_PARENTHESIS);
+			setState(355);
+			match(DELIMITER);
 			}
 		}
 		catch (RecognitionException re) {
@@ -2392,11 +2410,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitUppercase_def(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitUppercase_def(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final Uppercase_defContext uppercase_def() throws RecognitionException {
@@ -2405,9 +2418,12 @@ public class PrimerPasoParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(357); match(FUNC_UPPERCASE);
-			setState(358); match(L_PARENTHESIS);
-			setState(359); match(R_PARENTHESIS);
+			setState(357);
+			match(FUNC_UPPERCASE);
+			setState(358);
+			match(L_PARENTHESIS);
+			setState(359);
+			match(R_PARENTHESIS);
 			}
 		}
 		catch (RecognitionException re) {
@@ -2422,14 +2438,14 @@ public class PrimerPasoParser extends Parser {
 	}
 
 	public static class ProgramContext extends ParserRuleContext {
+		public Main_defContext main_def() {
+			return getRuleContext(Main_defContext.class,0);
+		}
 		public List<Function_defContext> function_def() {
 			return getRuleContexts(Function_defContext.class);
 		}
 		public Function_defContext function_def(int i) {
 			return getRuleContext(Function_defContext.class,i);
-		}
-		public Main_defContext main_def() {
-			return getRuleContext(Main_defContext.class,0);
 		}
 		public ProgramContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -2443,11 +2459,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitProgram(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitProgram(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ProgramContext program() throws RecognitionException {
@@ -2460,11 +2471,12 @@ public class PrimerPasoParser extends Parser {
 			setState(364);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,12,_ctx);
-			while ( _alt!=2 && _alt!=-1 ) {
+			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
-					setState(361); function_def();
+					setState(361);
+					function_def();
 					}
 					} 
 				}
@@ -2472,7 +2484,8 @@ public class PrimerPasoParser extends Parser {
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,12,_ctx);
 			}
-			setState(367); main_def();
+			setState(367);
+			main_def();
 			}
 		}
 		catch (RecognitionException re) {
@@ -2487,14 +2500,29 @@ public class PrimerPasoParser extends Parser {
 	}
 
 	public static class SentenceContext extends ParserRuleContext {
+		public Var_declContext var_decl() {
+			return getRuleContext(Var_declContext.class,0);
+		}
+		public If_conditionalContext if_conditional() {
+			return getRuleContext(If_conditionalContext.class,0);
+		}
+		public Print_defContext print_def() {
+			return getRuleContext(Print_defContext.class,0);
+		}
+		public Power_defContext power_def() {
+			return getRuleContext(Power_defContext.class,0);
+		}
 		public ResultContext result() {
 			return getRuleContext(ResultContext.class,0);
 		}
-		public CompareString_defContext compareString_def() {
-			return getRuleContext(CompareString_defContext.class,0);
+		public Dowhile_defContext dowhile_def() {
+			return getRuleContext(Dowhile_defContext.class,0);
 		}
-		public Var_declContext var_decl() {
-			return getRuleContext(Var_declContext.class,0);
+		public Do_defContext do_def() {
+			return getRuleContext(Do_defContext.class,0);
+		}
+		public While_defContext while_def() {
+			return getRuleContext(While_defContext.class,0);
 		}
 		public For_defContext for_def() {
 			return getRuleContext(For_defContext.class,0);
@@ -2502,32 +2530,17 @@ public class PrimerPasoParser extends Parser {
 		public IsDigit_defContext isDigit_def() {
 			return getRuleContext(IsDigit_defContext.class,0);
 		}
-		public Var_callContext var_call() {
-			return getRuleContext(Var_callContext.class,0);
-		}
-		public Do_defContext do_def() {
-			return getRuleContext(Do_defContext.class,0);
-		}
-		public If_conditionalContext if_conditional() {
-			return getRuleContext(If_conditionalContext.class,0);
-		}
-		public Power_defContext power_def() {
-			return getRuleContext(Power_defContext.class,0);
-		}
-		public While_defContext while_def() {
-			return getRuleContext(While_defContext.class,0);
-		}
 		public Replace_defContext replace_def() {
 			return getRuleContext(Replace_defContext.class,0);
 		}
+		public CompareString_defContext compareString_def() {
+			return getRuleContext(CompareString_defContext.class,0);
+		}
+		public Var_callContext var_call() {
+			return getRuleContext(Var_callContext.class,0);
+		}
 		public Func_callContext func_call() {
 			return getRuleContext(Func_callContext.class,0);
-		}
-		public Dowhile_defContext dowhile_def() {
-			return getRuleContext(Dowhile_defContext.class,0);
-		}
-		public Print_defContext print_def() {
-			return getRuleContext(Print_defContext.class,0);
 		}
 		public SentenceContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -2541,11 +2554,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitSentence(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitSentence(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final SentenceContext sentence() throws RecognitionException {
@@ -2557,98 +2565,99 @@ public class PrimerPasoParser extends Parser {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(369); var_decl();
+				setState(369);
+				var_decl();
 				}
 				break;
-
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(370); if_conditional();
+				setState(370);
+				if_conditional();
 				}
 				break;
-
 			case 3:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(371); print_def();
+				setState(371);
+				print_def();
 				}
 				break;
-
 			case 4:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(372); power_def();
+				setState(372);
+				power_def();
 				}
 				break;
-
 			case 5:
 				enterOuterAlt(_localctx, 5);
 				{
-				setState(373); result();
+				setState(373);
+				result();
 				}
 				break;
-
 			case 6:
 				enterOuterAlt(_localctx, 6);
 				{
-				setState(374); dowhile_def();
+				setState(374);
+				dowhile_def();
 				}
 				break;
-
 			case 7:
 				enterOuterAlt(_localctx, 7);
 				{
-				setState(375); do_def();
+				setState(375);
+				do_def();
 				}
 				break;
-
 			case 8:
 				enterOuterAlt(_localctx, 8);
 				{
-				setState(376); while_def();
+				setState(376);
+				while_def();
 				}
 				break;
-
 			case 9:
 				enterOuterAlt(_localctx, 9);
 				{
-				setState(377); for_def();
+				setState(377);
+				for_def();
 				}
 				break;
-
 			case 10:
 				enterOuterAlt(_localctx, 10);
 				{
-				setState(378); isDigit_def();
+				setState(378);
+				isDigit_def();
 				}
 				break;
-
 			case 11:
 				enterOuterAlt(_localctx, 11);
 				{
-				setState(379); replace_def();
+				setState(379);
+				replace_def();
 				}
 				break;
-
 			case 12:
 				enterOuterAlt(_localctx, 12);
 				{
-				setState(380); compareString_def();
+				setState(380);
+				compareString_def();
 				}
 				break;
-
 			case 13:
 				enterOuterAlt(_localctx, 13);
 				{
-				setState(381); var_call();
+				setState(381);
+				var_call();
 				}
 				break;
-
 			case 14:
 				enterOuterAlt(_localctx, 14);
 				{
-				setState(382); func_call();
+				setState(382);
+				func_call();
 				}
 				break;
 			}
@@ -2665,20 +2674,20 @@ public class PrimerPasoParser extends Parser {
 	}
 
 	public static class String_sentenceContext extends ParserRuleContext {
-		public IsEmpty_defContext isEmpty_def() {
-			return getRuleContext(IsEmpty_defContext.class,0);
+		public Contains_defContext contains_def() {
+			return getRuleContext(Contains_defContext.class,0);
 		}
 		public Change_defContext change_def() {
 			return getRuleContext(Change_defContext.class,0);
 		}
-		public Length_defContext length_def() {
-			return getRuleContext(Length_defContext.class,0);
-		}
 		public Uppercase_defContext uppercase_def() {
 			return getRuleContext(Uppercase_defContext.class,0);
 		}
-		public Contains_defContext contains_def() {
-			return getRuleContext(Contains_defContext.class,0);
+		public Length_defContext length_def() {
+			return getRuleContext(Length_defContext.class,0);
+		}
+		public IsEmpty_defContext isEmpty_def() {
+			return getRuleContext(IsEmpty_defContext.class,0);
 		}
 		public String_sentenceContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -2692,11 +2701,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitString_sentence(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitString_sentence(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final String_sentenceContext string_sentence() throws RecognitionException {
@@ -2708,31 +2712,36 @@ public class PrimerPasoParser extends Parser {
 			case FUNC_CONTAINS:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(385); contains_def();
+				setState(385);
+				contains_def();
 				}
 				break;
 			case FUNC_CHANGE:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(386); change_def();
+				setState(386);
+				change_def();
 				}
 				break;
 			case FUNC_UPPERCASE:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(387); uppercase_def();
+				setState(387);
+				uppercase_def();
 				}
 				break;
 			case FUNC_LEN:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(388); length_def();
+				setState(388);
+				length_def();
 				}
 				break;
 			case FUNC_ISEMPTY:
 				enterOuterAlt(_localctx, 5);
 				{
-				setState(389); isEmpty_def();
+				setState(389);
+				isEmpty_def();
 				}
 				break;
 			default:
@@ -2754,20 +2763,20 @@ public class PrimerPasoParser extends Parser {
 		public SortAsc_defContext sortAsc_def() {
 			return getRuleContext(SortAsc_defContext.class,0);
 		}
-		public Higher_defContext higher_def() {
-			return getRuleContext(Higher_defContext.class,0);
-		}
-		public Amount_defContext amount_def() {
-			return getRuleContext(Amount_defContext.class,0);
-		}
-		public Less_defContext less_def() {
-			return getRuleContext(Less_defContext.class,0);
+		public Divide_defContext divide_def() {
+			return getRuleContext(Divide_defContext.class,0);
 		}
 		public SortDes_defContext sortDes_def() {
 			return getRuleContext(SortDes_defContext.class,0);
 		}
-		public Divide_defContext divide_def() {
-			return getRuleContext(Divide_defContext.class,0);
+		public Higher_defContext higher_def() {
+			return getRuleContext(Higher_defContext.class,0);
+		}
+		public Less_defContext less_def() {
+			return getRuleContext(Less_defContext.class,0);
+		}
+		public Amount_defContext amount_def() {
+			return getRuleContext(Amount_defContext.class,0);
 		}
 		public Array_sentenceContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -2781,11 +2790,6 @@ public class PrimerPasoParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof PrimerPasoListener ) ((PrimerPasoListener)listener).exitArray_sentence(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof PrimerPasoVisitor ) return ((PrimerPasoVisitor<? extends T>)visitor).visitArray_sentence(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final Array_sentenceContext array_sentence() throws RecognitionException {
@@ -2797,37 +2801,43 @@ public class PrimerPasoParser extends Parser {
 			case FUNC_SORTASC:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(392); sortAsc_def();
+				setState(392);
+				sortAsc_def();
 				}
 				break;
 			case FUNC_DIVIDE:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(393); divide_def();
+				setState(393);
+				divide_def();
 				}
 				break;
 			case FUNC_SORTDES:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(394); sortDes_def();
+				setState(394);
+				sortDes_def();
 				}
 				break;
 			case FUNC_HIGHER:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(395); higher_def();
+				setState(395);
+				higher_def();
 				}
 				break;
 			case FUNC_LESS:
 				enterOuterAlt(_localctx, 5);
 				{
-				setState(396); less_def();
+				setState(396);
+				less_def();
 				}
 				break;
 			case FUNC_AMOUNT:
 				enterOuterAlt(_localctx, 6);
 				{
-				setState(397); amount_def();
+				setState(397);
+				amount_def();
 				}
 				break;
 			default:
@@ -2847,23 +2857,25 @@ public class PrimerPasoParser extends Parser {
 
 	public boolean sempred(RuleContext _localctx, int ruleIndex, int predIndex) {
 		switch (ruleIndex) {
-		case 0: return expression_sempred((ExpressionContext)_localctx, predIndex);
+		case 0:
+			return expression_sempred((ExpressionContext)_localctx, predIndex);
 		}
 		return true;
 	}
 	private boolean expression_sempred(ExpressionContext _localctx, int predIndex) {
 		switch (predIndex) {
-		case 0: return precpred(_ctx, 9);
-
-		case 1: return precpred(_ctx, 8);
-
-		case 2: return precpred(_ctx, 7);
-
-		case 3: return precpred(_ctx, 6);
-
-		case 4: return precpred(_ctx, 4);
-
-		case 5: return precpred(_ctx, 3);
+		case 0:
+			return precpred(_ctx, 9);
+		case 1:
+			return precpred(_ctx, 8);
+		case 2:
+			return precpred(_ctx, 7);
+		case 3:
+			return precpred(_ctx, 6);
+		case 4:
+			return precpred(_ctx, 4);
+		case 5:
+			return precpred(_ctx, 3);
 		}
 		return true;
 	}
@@ -2930,8 +2942,8 @@ public class PrimerPasoParser extends Parser {
 		"\2\u00ab\u00b1\5\26\f\2\u00ac\u00b1\5\30\r\2\u00ad\u00b1\5\32\16\2\u00ae"+
 		"\u00b1\5\34\17\2\u00af\u00b1\5\36\20\2\u00b0\u00ab\3\2\2\2\u00b0\u00ac"+
 		"\3\2\2\2\u00b0\u00ad\3\2\2\2\u00b0\u00ae\3\2\2\2\u00b0\u00af\3\2\2\2\u00b1"+
-		"\25\3\2\2\2\u00b2\u00b3\7\5\2\2\u00b3\27\3\2\2\2\u00b4\u00b5\7\4\2\2\u00b5"+
-		"\31\3\2\2\2\u00b6\u00b7\7\3\2\2\u00b7\33\3\2\2\2\u00b8\u00b9\7\6\2\2\u00b9"+
+		"\25\3\2\2\2\u00b2\u00b3\7\3\2\2\u00b3\27\3\2\2\2\u00b4\u00b5\7\4\2\2\u00b5"+
+		"\31\3\2\2\2\u00b6\u00b7\7\5\2\2\u00b7\33\3\2\2\2\u00b8\u00b9\7\6\2\2\u00b9"+
 		"\35\3\2\2\2\u00ba\u00bb\7\62\2\2\u00bb\37\3\2\2\2\u00bc\u00bd\7\63\2\2"+
 		"\u00bd\u00be\5\2\2\2\u00be\u00bf\7\33\2\2\u00bf!\3\2\2\2\u00c0\u00c1\7"+
 		"\64\2\2\u00c1\u00c2\7\25\2\2\u00c2\u00c3\5\2\2\2\u00c3\u00c4\7\26\2\2"+

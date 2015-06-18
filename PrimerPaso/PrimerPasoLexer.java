@@ -1,4 +1,4 @@
-// Generated from PrimerPaso.g4 by ANTLR 4.2
+// Generated from PrimerPaso.g4 by ANTLR 4.5
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
@@ -10,11 +10,13 @@ import org.antlr.v4.runtime.misc.*;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class PrimerPasoLexer extends Lexer {
+	static { RuntimeMetaData.checkVersion("4.5", RuntimeMetaData.VERSION); }
+
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		T__3=1, T__2=2, T__1=3, T__0=4, OPERATOR_NOT=5, OPERATOR_AND=6, OPERATOR_OR=7, 
+		T__0=1, T__1=2, T__2=3, T__3=4, OPERATOR_NOT=5, OPERATOR_AND=6, OPERATOR_OR=7, 
 		OPERATOR_EQU=8, OPERATOR_DIFF=9, OPERATOR_GRT=10, OPERATOR_LOT=11, OPERATOR_GRE=12, 
 		OPERATOR_LOE=13, OPERATOR_POW=14, OPERATOR_MULT=15, OPERATOR_DIV=16, OPERATOR_NEG=17, 
 		OPERATOR_ADD=18, L_PARENTHESIS=19, R_PARENTHESIS=20, L_BRACE=21, R_BRACE=22, 
@@ -30,21 +32,8 @@ public class PrimerPasoLexer extends Lexer {
 		"DEFAULT_MODE"
 	};
 
-	public static final String[] tokenNames = {
-		"<INVALID>",
-		"'bool'", "'letra'", "'entero'", "'hilera'", "'!'", "'y'", "'o'", "'=='", 
-		"'!='", "'>'", "'<'", "'<='", "'>='", "'^'", "'*'", "'/'", "'-'", "'+'", 
-		"'('", "')'", "'{'", "'}'", "'['", "']'", "';'", "','", "'.mayuscula'", 
-		"'.largo'", "'.cantidad'", "'.aHilera'", "'.aNumero'", "'imprimir'", "'principal'", 
-		"'potencia'", "'esDigito'", "'.ordenarAsc'", "'.ordenarDes'", "'.caracterEn'", 
-		"'.mayor'", "'.menor'", "'.dividir'", "'.cambiar'", "'.reemplazar'", "'.contiene'", 
-		"'.esVacia'", "'compararHileras'", "'compararLetra'", "'nada'", "'retorna'", 
-		"'si'", "'sino'", "'haga'", "'mientras'", "'por mientras'", "'para cada'", 
-		"'='", "ID", "INLINE_COMMENT", "WS", "CHARACTER", "STRING", "INTEGER", 
-		"BOOLEAN", "ARRAY"
-	};
 	public static final String[] ruleNames = {
-		"T__3", "T__2", "T__1", "T__0", "OPERATOR_NOT", "OPERATOR_AND", "OPERATOR_OR", 
+		"T__0", "T__1", "T__2", "T__3", "OPERATOR_NOT", "OPERATOR_AND", "OPERATOR_OR", 
 		"OPERATOR_EQU", "OPERATOR_DIFF", "OPERATOR_GRT", "OPERATOR_LOT", "OPERATOR_GRE", 
 		"OPERATOR_LOE", "OPERATOR_POW", "OPERATOR_MULT", "OPERATOR_DIV", "OPERATOR_NEG", 
 		"OPERATOR_ADD", "L_PARENTHESIS", "R_PARENTHESIS", "L_BRACE", "R_BRACE", 
@@ -58,6 +47,64 @@ public class PrimerPasoLexer extends Lexer {
 		"BOOLEAN", "ARRAY"
 	};
 
+	private static final String[] _LITERAL_NAMES = {
+		null, "'entero'", "'letra'", "'bool'", "'hilera'", "'!'", "'y'", "'o'", 
+		"'=='", "'!='", "'>'", "'<'", "'<='", "'>='", "'^'", "'*'", "'/'", "'-'", 
+		"'+'", "'('", "')'", "'{'", "'}'", "'['", "']'", "';'", "','", "'.mayuscula'", 
+		"'.largo'", "'.cantidad'", "'.aHilera'", "'.aNumero'", "'imprimir'", "'principal'", 
+		"'potencia'", "'esDigito'", "'.ordenarAsc'", "'.ordenarDes'", "'.caracterEn'", 
+		"'.mayor'", "'.menor'", "'.dividir'", "'.cambiar'", "'.reemplazar'", "'.contiene'", 
+		"'.esVacia'", "'compararHileras'", "'compararLetra'", "'nada'", "'retorna'", 
+		"'si'", "'sino'", "'haga'", "'mientras'", "'por mientras'", "'para cada'", 
+		"'='"
+	};
+	private static final String[] _SYMBOLIC_NAMES = {
+		null, null, null, null, null, "OPERATOR_NOT", "OPERATOR_AND", "OPERATOR_OR", 
+		"OPERATOR_EQU", "OPERATOR_DIFF", "OPERATOR_GRT", "OPERATOR_LOT", "OPERATOR_GRE", 
+		"OPERATOR_LOE", "OPERATOR_POW", "OPERATOR_MULT", "OPERATOR_DIV", "OPERATOR_NEG", 
+		"OPERATOR_ADD", "L_PARENTHESIS", "R_PARENTHESIS", "L_BRACE", "R_BRACE", 
+		"L_BRACKET", "R_BRACKET", "DELIMITER", "COMMA", "FUNC_UPPERCASE", "FUNC_LEN", 
+		"FUNC_AMOUNT", "FUNC_TOSTRING", "FUNC_TOINT", "FUNC_PRINT", "FUNC_MAIN", 
+		"FUNC_POW", "FUNC_ISDIGIT", "FUNC_SORTASC", "FUNC_SORTDES", "FUNC_CHARAT", 
+		"FUNC_HIGHER", "FUNC_LESS", "FUNC_DIVIDE", "FUNC_CHANGE", "FUNC_REPLACE", 
+		"FUNC_CONTAINS", "FUNC_ISEMPTY", "FUNC_COMPARESTRING", "FUNC_COMPARECHAR", 
+		"VOID", "RETURN", "IF", "ELSE", "DO", "DOWHILE", "WHILE", "FOR", "OPERATOR_ASSIG", 
+		"ID", "INLINE_COMMENT", "WS", "CHARACTER", "STRING", "INTEGER", "BOOLEAN", 
+		"ARRAY"
+	};
+	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
+
+	/**
+	 * @deprecated Use {@link #VOCABULARY} instead.
+	 */
+	@Deprecated
+	public static final String[] tokenNames;
+	static {
+		tokenNames = new String[_SYMBOLIC_NAMES.length];
+		for (int i = 0; i < tokenNames.length; i++) {
+			tokenNames[i] = VOCABULARY.getLiteralName(i);
+			if (tokenNames[i] == null) {
+				tokenNames[i] = VOCABULARY.getSymbolicName(i);
+			}
+
+			if (tokenNames[i] == null) {
+				tokenNames[i] = "<INVALID>";
+			}
+		}
+	}
+
+	@Override
+	@Deprecated
+	public String[] getTokenNames() {
+		return tokenNames;
+	}
+
+	@Override
+
+	public Vocabulary getVocabulary() {
+		return VOCABULARY;
+	}
+
 
 	public PrimerPasoLexer(CharStream input) {
 		super(input);
@@ -66,9 +113,6 @@ public class PrimerPasoLexer extends Lexer {
 
 	@Override
 	public String getGrammarFileName() { return "PrimerPaso.g4"; }
-
-	@Override
-	public String[] getTokenNames() { return tokenNames; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }
@@ -91,8 +135,8 @@ public class PrimerPasoLexer extends Lexer {
 		"\t!\4\"\t\"\4#\t#\4$\t$\4%\t%\4&\t&\4\'\t\'\4(\t(\4)\t)\4*\t*\4+\t+\4"+
 		",\t,\4-\t-\4.\t.\4/\t/\4\60\t\60\4\61\t\61\4\62\t\62\4\63\t\63\4\64\t"+
 		"\64\4\65\t\65\4\66\t\66\4\67\t\67\48\t8\49\t9\4:\t:\4;\t;\4<\t<\4=\t="+
-		"\4>\t>\4?\t?\4@\t@\4A\tA\4B\tB\3\2\3\2\3\2\3\2\3\2\3\3\3\3\3\3\3\3\3\3"+
-		"\3\3\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\6\3\6\3"+
+		"\4>\t>\4?\t?\4@\t@\4A\tA\4B\tB\3\2\3\2\3\2\3\2\3\2\3\2\3\2\3\3\3\3\3\3"+
+		"\3\3\3\3\3\3\3\4\3\4\3\4\3\4\3\4\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\6\3\6\3"+
 		"\7\3\7\3\b\3\b\3\t\3\t\3\t\3\n\3\n\3\n\3\13\3\13\3\f\3\f\3\r\3\r\3\r\3"+
 		"\16\3\16\3\16\3\17\3\17\3\20\3\20\3\21\3\21\3\22\3\22\3\23\3\23\3\24\3"+
 		"\24\3\25\3\25\3\26\3\26\3\27\3\27\3\30\3\30\3\31\3\31\3\32\3\32\3\33\3"+
@@ -132,7 +176,7 @@ public class PrimerPasoLexer extends Lexer {
 		"_\3\2\2\2\2a\3\2\2\2\2c\3\2\2\2\2e\3\2\2\2\2g\3\2\2\2\2i\3\2\2\2\2k\3"+
 		"\2\2\2\2m\3\2\2\2\2o\3\2\2\2\2q\3\2\2\2\2u\3\2\2\2\2w\3\2\2\2\2y\3\2\2"+
 		"\2\2{\3\2\2\2\2}\3\2\2\2\2\177\3\2\2\2\2\u0081\3\2\2\2\2\u0083\3\2\2\2"+
-		"\3\u0085\3\2\2\2\5\u008a\3\2\2\2\7\u0090\3\2\2\2\t\u0097\3\2\2\2\13\u009e"+
+		"\3\u0085\3\2\2\2\5\u008c\3\2\2\2\7\u0092\3\2\2\2\t\u0097\3\2\2\2\13\u009e"+
 		"\3\2\2\2\r\u00a0\3\2\2\2\17\u00a2\3\2\2\2\21\u00a4\3\2\2\2\23\u00a7\3"+
 		"\2\2\2\25\u00aa\3\2\2\2\27\u00ac\3\2\2\2\31\u00ae\3\2\2\2\33\u00b1\3\2"+
 		"\2\2\35\u00b4\3\2\2\2\37\u00b6\3\2\2\2!\u00b8\3\2\2\2#\u00ba\3\2\2\2%"+
@@ -146,11 +190,11 @@ public class PrimerPasoLexer extends Lexer {
 		"\u01af\3\2\2\2g\u01b2\3\2\2\2i\u01b7\3\2\2\2k\u01bc\3\2\2\2m\u01c5\3\2"+
 		"\2\2o\u01d2\3\2\2\2q\u01dc\3\2\2\2s\u01de\3\2\2\2u\u01e1\3\2\2\2w\u01ec"+
 		"\3\2\2\2y\u01fa\3\2\2\2{\u0200\3\2\2\2}\u0204\3\2\2\2\177\u0218\3\2\2"+
-		"\2\u0081\u0228\3\2\2\2\u0083\u0236\3\2\2\2\u0085\u0086\7d\2\2\u0086\u0087"+
-		"\7q\2\2\u0087\u0088\7q\2\2\u0088\u0089\7n\2\2\u0089\4\3\2\2\2\u008a\u008b"+
-		"\7n\2\2\u008b\u008c\7g\2\2\u008c\u008d\7v\2\2\u008d\u008e\7t\2\2\u008e"+
-		"\u008f\7c\2\2\u008f\6\3\2\2\2\u0090\u0091\7g\2\2\u0091\u0092\7p\2\2\u0092"+
-		"\u0093\7v\2\2\u0093\u0094\7g\2\2\u0094\u0095\7t\2\2\u0095\u0096\7q\2\2"+
+		"\2\u0081\u0228\3\2\2\2\u0083\u0236\3\2\2\2\u0085\u0086\7g\2\2\u0086\u0087"+
+		"\7p\2\2\u0087\u0088\7v\2\2\u0088\u0089\7g\2\2\u0089\u008a\7t\2\2\u008a"+
+		"\u008b\7q\2\2\u008b\4\3\2\2\2\u008c\u008d\7n\2\2\u008d\u008e\7g\2\2\u008e"+
+		"\u008f\7v\2\2\u008f\u0090\7t\2\2\u0090\u0091\7c\2\2\u0091\6\3\2\2\2\u0092"+
+		"\u0093\7d\2\2\u0093\u0094\7q\2\2\u0094\u0095\7q\2\2\u0095\u0096\7n\2\2"+
 		"\u0096\b\3\2\2\2\u0097\u0098\7j\2\2\u0098\u0099\7k\2\2\u0099\u009a\7n"+
 		"\2\2\u009a\u009b\7g\2\2\u009b\u009c\7t\2\2\u009c\u009d\7c\2\2\u009d\n"+
 		"\3\2\2\2\u009e\u009f\7#\2\2\u009f\f\3\2\2\2\u00a0\u00a1\7{\2\2\u00a1\16"+
